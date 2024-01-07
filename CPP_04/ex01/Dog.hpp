@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ylamsiah <ylamsiah@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/07 22:31:18 by ylamsiah          #+#    #+#             */
+/*   Updated: 2023/11/07 23:06:43 by ylamsiah         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef DOG_HPP
+# define DOG_HPP
+
+# include "Animal.hpp"
+# include "Brain.hpp"
+
+class Dog : public Animal
+{
+    private:
+        Brain *c_brain;
+    public:
+        Dog();
+        Dog(const std::string &type);
+        Dog(const Dog &cpy);
+        Dog &operator=(const Dog &obj);
+        ~Dog();
+
+        void makeSound( void ) const;
+};
+#endif 
